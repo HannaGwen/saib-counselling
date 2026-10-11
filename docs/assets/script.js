@@ -41,15 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Booking form — demo only, not wired to a backend
+  // Contact form — no booking backend yet, so this opens a pre-filled email
+  // to saibcounselling@outlook.com instead of silently doing nothing.
   var form = document.getElementById('booking-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var original = btn.textContent;
-      btn.textContent = 'Request received (demo)';
-      setTimeout(function () { btn.textContent = original; }, 2500);
+      var name = (form.name && form.name.value || '').trim();
+      var email = (form.email && form.email.value || '').trim();
+      var message = (form.message && form.message.value || '').trim();
+      var subject = encodeURIComponent('Enquiry from ' + (name || 'website visitor'));
+      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = 'mailto:saibcounselling@outlook.com?subject=' + subject + '&body=' + body;
     });
   }
 });
