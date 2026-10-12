@@ -114,7 +114,7 @@ p { margin: 0 0 1em; }
 
 .btn-primary {
   background: var(--forest);
-  color: var(--cream-soft);
+  color: var(--white);
 }
 .btn-primary:hover { background: var(--forest-80); transform: translateY(-1px); }
 
