@@ -121,12 +121,17 @@
               <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required>
             </div>
             <div class="full">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" autocomplete="tel" pattern="[0-9+\s()-]{7,20}" title="Please enter a valid phone number (at least 7 digits)" required>
+            </div>
+            <div class="full">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Share a little about what you're looking for..."></textarea>
+              <textarea id="message" name="message" placeholder="Share a little about what you're looking for..." required></textarea>
             </div>
           </div>
           <button type="submit" class="btn btn-primary" style="margin-top:22px; width:100%; justify-content:center;">Send Enquiry</button>
         </form>
+        <p style="font-style:italic; font-size:0.82rem; color:var(--forest-80); margin:14px 0 0;">I aim to get back to you within 3 working days — please keep an eye on your junk/spam folder in case my reply ends up there.</p>
       </div>
     </div>
   </section>

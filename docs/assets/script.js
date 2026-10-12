@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       var name = (form.name && form.name.value || '').trim();
       var email = (form.email && form.email.value || '').trim();
+      var phone = (form.phone && form.phone.value || '').trim();
       var message = (form.message && form.message.value || '').trim();
       var subject = encodeURIComponent('Enquiry from ' + (name || 'website visitor'));
-      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\n' + message);
       window.location.href = 'mailto:saibcounselling@outlook.com?subject=' + subject + '&body=' + body;
     });
   }
